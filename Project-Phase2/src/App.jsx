@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import Properties from './data/properties'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -31,5 +31,5 @@ function App() {
     </>
   )
 }
-
+console.log("pr", Properties)
 export default App
