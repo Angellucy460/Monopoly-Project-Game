@@ -1,19 +1,34 @@
 import React from "react";
-import "./board.css"
+import "./board.css";
 
-function GameBoard() {
-    return (
-        <div className="d-flex justify-content-center align-items-center min-vh-100">
-            <div className="board-grid">
-                {}
-                 {[...Array(40)].map((_, i) => ( // creates an array of undefined values
-          <div className="tile" key={i}>
-            {i}
+const Board = () => {
+  // Create a 11x11 grid, total of 121 cells
+  const tiles = [];
+
+  for (let row = 0; row < 11; row++) {
+    for (let col = 0; col < 11; col++) {
+      const isEdge =
+        row === 0 || row === 10 || col === 0 || col === 10;
+
+      if (isEdge) {
+        tiles.push(
+          <div className="tile" key={`${row}-${col}`}>
+            {`${row},${col}`}
           </div>
-        ))}
-            </div>
-        </div>
-    );
+        );
+      } else {
+        tiles.push(
+          <div className="tile empty" key={`${row}-${col}`}></div>
+        );
+      }
+    }
+  }
 
+  return (
+    <div className="board-container container mt-4 d-flex justify-content-center align-items-center min-vh-100">
+      <div className="board-grid">{tiles}</div>
+    </div>
+  );
 };
-export default GameBoard;
+
+export default Board;
