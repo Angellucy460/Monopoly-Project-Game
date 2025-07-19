@@ -1,0 +1,19 @@
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  width: 100%;
+  aspect-ratio: 1;
+  border: 4px solid #333;
+  background-color: #e6f2ff;
+  position: relative; 
+}
+.tile {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 5px;
+  background-color: white;
+}
