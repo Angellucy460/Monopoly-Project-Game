@@ -1,12 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import Tile from './componets/square'
-import Board from './componets/gameboard'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Tile from './components/square';
+import Board from './components/gameboard';
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Tile/>
-    <Board/>
-  </StrictMode>,
+    <Board />
+  
+  </StrictMode>
 )

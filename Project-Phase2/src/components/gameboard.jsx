@@ -97,17 +97,17 @@ const playerPosition = "0,10";
 
       if (isEdge) {
         const label = cornerTiles[key] || tileLabels[key] || "";
-        const isCorner = key in cornerTiles;
-        const isSide = isEdge && !isCorner;
-        const isVertical = col === 0 || col === 10;
-        const propertyColor = propertyGroups[key] || "";
-        const hasPlayer = key === playerPosition;
+        const isCorner = key in cornerTiles; 
+        const isSide = isEdge && !isCorner; // Check if the tile is a side tile (not a corner)
+        const isVertical = col === 0 || col === 10; // Check if the tile is in the vertical columns
+        const propertyColor = propertyGroups[key] || ""; // Get the property color if it exists
+        const hasPlayer = key === playerPosition; // Check if the tile is the player's position
 
         tiles.push(
           <div className={`tile ${isCorner ? "corner" : ""} ${isSide ? "side" : ""} ${propertyColor}`} key={key}>
             <span>{label}</span>
 
-            {hasPlayer && <div className="player-token">🚗</div>}
+            {hasPlayer && <div className="player-token"></div>}
           </div>
         );
       } else {
