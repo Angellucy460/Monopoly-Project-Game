@@ -156,16 +156,18 @@ const Board = () => {
         const icon = iconMap[key];
 
         tiles.push(
-          <div
-            className={`tile ${isCorner ? "corner" : ""} ${directionClass} ${colorClass}`}
-            key={key}
-          >
-            {icon && <span className="tile-emoji">{icon}</span>}
-            <span>{label}</span>
-            {titleprices[key] && <span className="tile-price">{titleprices[key]}</span>}
-            {hasPlayer && <div className="player-token" />}
-          </div>
-        );
+        <div
+    className={`tile ${isCorner ? "corner" : ""} ${directionClass} ${colorClass}`}
+    key={key}
+  >
+    {icon && <div className="tile-emoji">{icon}</div>}
+    <div className="tile-labels">
+      <span className="tile-name">{label}</span>
+      {titleprices[key] && <span className="tile-price">{titleprices[key]}</span>}
+    </div>
+    {hasPlayer && <div className="player-token" />}
+  </div>
+     );
       } else {
         tiles.push(<div className="tile empty" key={key}></div>);
       }
