@@ -1,80 +1,112 @@
-
-
+.container mt-4 {
+  width: 100%;
+}
 .board-grid {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(11, 1fr);
-  width: 98vw;
-   /*max-width: 500px;*/
-   height: 50vw;
-  aspect-ratio: 1;
+  width: 55vw;
+  height: 50vw;
+  aspect-ratio: 1 / 1;
   border: 4px solid #333;
   background-color: #e6f2ff;
-  
 }
+
 .tile {
   border: 1px solid #ccc;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 0.75rem;
   padding: 2px;
   text-align: center;
   background-color: white;
+  position: relative;
 }
+
+.tile span {
+  max-width: 90%;
+}
+
 .tile.empty {
   background-color: transparent;
-  border: none; 
+  border: none;
 }
+
 .tile.corner {
-  background-color: #f0f0f0;
   font-weight: bold;
-  color: #333;
-}
-.tile span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 1.2;
-}
-.tile.side {
-  font-size: 0.5rem;
+  background-color: #f5f5f5;
 }
 
-.tile.vertical span {
-  transform: rotate(-90deg);
-  writing-mode: vertical-rl;
-  white-space: nowrap;
+/* Property group color bands */
+.tile.brown.bottom { border-top: 5px solid #8b4513; }
+.tile.light-blue.bottom { border-top: 5px solid #add8e6; }
+.tile.pink.right { border-left: 5px solid #ff69b4; }
+.tile.orange.right { border-left: 5px solid #ffa500; }
+.tile.red.top { border-bottom: 5px solid #ff0000; }
+.tile.yellow.top { border-bottom: 5px solid #ffd700; }
+.tile.green.left { border-right: 5px solid #008000; }
+.tile.dark-blue.left { border-right: 5px solid #00008b; }
+
+/* Tile orientation classes */
+.tile.top span {
+  transform: rotate(180deg);
+}
+.tile.left span {
+  transform: rotate(270deg);
+}
+.tile.right span {
+  transform: rotate(90deg);
+}
+.tile.bottom span {
+  transform: rotate(0deg);
 }
 
+/* Player token */
 .player-token {
-  font-size: 1rem;
-  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-top: 3px;
+}
+.tile-emoji {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+.tile-price {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 2px;
+  
+}
+ @media (max-width: 480px) {
+  .board-grid {
+    width: 95vw;
+    height: 95vw;
+  }
+
+  .tile {
+    font-size: 0.4rem;
+    padding: 0.5px;
+  }
+
+  .tile-emoji {
+    font-size: 1rem;
+  }
+
+  .tile-price {
+    font-size: 0.65rem;
+  }
+}
+.card {
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-/* Property colors */
-.tile.brown {
-  border-top: 4px solid #8b4513;
-}
-.tile.light-blue {
-  border-top: 4px solid #add8e6;
-}
-.tile.pink {
-  border-left: 4px solid #ff69b4;
-}
-.tile.orange {
-  border-left: 4px solid #ffa500;
-}
-.tile.red {
-  border-bottom: 4px solid #ff0000;
-}
-.tile.yellow {
-  border-bottom: 4px solid #ffd700;
-}
-.tile.green {
-  border-right: 4px solid #008000;
-}
-.tile.dark-blue {
-  border-right: 4px solid #00008b;
-}
+  
+
+
+
+
