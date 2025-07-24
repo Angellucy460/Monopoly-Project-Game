@@ -104,30 +104,30 @@
 }
 
 .space-type-chance {
-  background-color: #ffcccc;
+  background-color: #dfafaf;
 }
 
 .space-type-chest {
-  background-color: #ccccff;
+  background-color: #8a8ab9;
 }
 
 .space-type-railroad {
-  background-color: #e6e6e6;
+  background-color: #ddc3c3;
 }
 
 .space-type-utility {
-  background-color: #e6ffe6;
+  background-color: #677e67;
 }
 
 .space-type-tax {
-  background-color: #ffe6e6;
+  background-color: #df4ec6;
 }
 
 .space-type-go,
 .space-type-jail,
 .space-type-parking,
 .space-type-gotojail {
-  background-color: #ffffcc;
+  background-color: #70aa3ac0;
 }
 
 .color-brown {
