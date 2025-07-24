@@ -370,11 +370,11 @@ function MonopolyGame() {
     if (currentPlayer.isComputer && gamePhase === "rolling" && !isRolling) {
       const timer = setTimeout(() => {
         rollDice()
-      }, 2000)
+      }, 7000)
 
       return () => clearTimeout(timer)
     }
-  }, [currentPlayerIndex, gamePhase, isRolling])
+  }, [currentPlayerIndex, gamePhase, isRolling, currentPlayer.isComputer, rollDice])
 
   // Render game over screen
   if (gamePhase === "game-over") {
