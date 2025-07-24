@@ -1,4 +1,4 @@
-# 🎲 Monopoly Game (React Edition)
+# 🎲 MONOPOLY GAME
 
 The **Monopoly Game** is a web-based, React-powered digital version of the classic Monopoly board game. It simulates the core economic mechanics—buying properties, paying rent, upgrading, and managing funds—within a modern, interactive interface.
 
