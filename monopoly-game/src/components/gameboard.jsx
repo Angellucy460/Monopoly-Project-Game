@@ -5,6 +5,7 @@ import ChanceCard from "./playercards/chancecard";
 import CommunityChestCard from "./playercards/communitycard";
 import { Tabs, Tab, Button, Modal } from "react-bootstrap";
 
+
 const Board = () => {
   const [key, setKey] = useState("titledeeds");
   const [showCards, setShowCards] = useState(true);
